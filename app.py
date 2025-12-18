@@ -101,7 +101,7 @@ def apply_dip_algorithms(img, data):
 
     gamma = float(data.get('gamma', 1.0))
     if gamma != 1.0:
-        invGamma = 1.0 / gamma
+        invGamma = gamma
         table = np.array([((i / 255.0) ** invGamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
         img = cv2.LUT(img, table)
 
