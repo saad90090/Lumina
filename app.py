@@ -8,8 +8,9 @@ from flask import Flask, render_template, request, jsonify, session, send_file
 app = Flask(__name__)
 app.secret_key = 'dip_project_final_key'
 
-UPLOAD_FOLDER = 'static/uploads'
-RESULT_FOLDER = 'static/results'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, 'static', 'uploads')
+RESULT_FOLDER = os.path.join(BASE_DIR, 'static', 'results')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(RESULT_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
