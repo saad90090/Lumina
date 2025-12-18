@@ -13,10 +13,9 @@
 
 | **Main Dashboard** | **Live Histogram Analysis** |
 |:---:|:---:|
-| ![Dashboard UI](https://via.placeholder.com/600x300?text=Upload+Your+Dashboard+Screenshot+Here) | ![Histogram](https://via.placeholder.com/600x300?text=Upload+Histogram+Screenshot+Here) |
+| ![Dashboard UI](dash.png) | ![Histogram](hist.png) |
 | *Real-time adjustments and preview* | *RGB channel distribution visualization* |
 
-> *Tip: Upload your own screenshots to a `screenshots/` folder in your repo and update the links above.*
 
 ---
 
