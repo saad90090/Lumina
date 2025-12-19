@@ -291,7 +291,14 @@
                 <div class="label-row"><span>Scale</span><span id="val_scale">100%</span></div>
                 <input type="range" id="scale" min="10" max="200" value="100" oninput="updateUI(this); sendData()">
             </div>
-
+<div class="control-group">
+    <div class="label-row"><span>Interpolation</span></div>
+    <select id="interpolation" onchange="sendData()">
+        <option value="linear">Linear (Smooth)</option>
+        <option value="nearest">Nearest (Pixel Art)</option>
+        <option value="cubic">Cubic (High Quality)</option>
+    </select>
+</div>
             <div class="control-group" style="display:flex; gap:10px;">
                 <select id="rotation" onchange="sendData()">
                     <option value="0">Rotation: 0°</option>
@@ -433,7 +440,7 @@
         function getControlData() {
             return {
                 scale: document.getElementById('scale').value,
-                interpolation: 'linear',
+                interpolation: document.getElementById('interpolation').value, 
                 rotation: document.getElementById('rotation').value,
                 flip: document.getElementById('flip').value,
                 brightness: document.getElementById('brightness').value,
